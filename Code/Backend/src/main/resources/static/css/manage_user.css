@@ -1,0 +1,16 @@
+#changePassForm {
+  border: 2px solid var(--Color3);
+  padding: 2rem;
+  border-radius: 40px;
+}
+#changePassForm .form-group {
+  text-align: center;
+}
+#changePassForm .form-group div {
+  text-align: left;
+  padding-left: 5rem;
+}
+#buttonDiv {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MU Cantine</title>
+    <link rel="icon" th:href="@{/img/icon.ico}" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/f9d1ffcb95.js" crossorigin="anonymous"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/mainUser.css}" rel="stylesheet" />
+    <link th:href="@{/css/global.css}" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.15.1/js/conflict-detection.js">
+    </script>
+    <header th:replace="fragments/header :: header"></header>
+    <aside class="sideBar hide">
+        <div th:replace="fragments/leftNav :: leftNav"></div>
+    </aside>
+    <aside class=" notificationBar hide">
+        <div th:replace="fragments/rightNav :: rightNav"></div>
+    </aside>
+    <div class="container">
+        <div id="finder">
+            <h2 th:text="#{user.find}">Filter</h2>
+            <input id="search" type="text" th:placeholder="#{search}">
+        </div>
+        <hr>
+        <ul class="list-group roomList" id="availableRooms" th:fragment="freeDeskList">
+            <th:block th:each="freeDesk : ${freeDeskList}">
+                <li class=" ">
+                    <div th:each="data : ${#strings.arraySplit(freeDesk, '/')}">
+                        <p th:text="*{data}"></p>
+                    </div>
+
+
+                </li>
+            </th:block>
+        </ul>
+        <div class="d-flex justify-content-center">
+            <a th:href="@{/admin/charts}" class="button-confirm" th:text="#{chart.view}">See charts</a>
+        </div>
+    </div>
+
+    <script>
+        var url = "/admin/availableDesks";
+        $('#availableRooms').load(url);
+        setInterval(function () {
+            $('#availableRooms').load(url);
+        }, 10000);
+        $(document).ready(function () {
+            $("#search").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#availableRooms li").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript" th:src="@{/js/notificationNav.js}"></script>
+    <script type="text/javascript" th:src="@{/js/optionNav.js}"></script>
+</body>
+
+</html>

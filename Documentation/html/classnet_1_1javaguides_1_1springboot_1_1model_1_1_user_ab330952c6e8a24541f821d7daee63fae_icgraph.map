@@ -1,0 +1,4 @@
+<map id="net.javaguides.springboot.model.User.getPassword" name="net.javaguides.springboot.model.User.getPassword">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#a6f24b90e0208fbabcacf2478f3cc1ae5" title="net.javaguides.springboot.controller.\lUserController.changePassword" alt="" coords="302,5,562,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1service_1_1user_1_1_user_service_impl.html#ad5b60019bb5216ee5d0ffe3c0bcaed91" title="net.javaguides.springboot.service.user.\lUserServiceImpl.loadUserByUsername" alt="" coords="293,71,571,112"/>
+</map>

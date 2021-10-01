@@ -1,0 +1,4 @@
+<map id="net.javaguides.springboot.controller.RoomController.update_room" name="net.javaguides.springboot.controller.RoomController.update_room">
+<area shape="rect" id="node2" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1room_1_1_room_service.html#a0150eb5177613a4e66dc07fc3370ac95" title="net.javaguides.springboot.service.room.\lRoomService.getRoomById" alt="" coords="323,5,607,47"/>
+<area shape="rect" id="node3" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1building_1_1_building_service.html#a37cb8382a13a32d649eb82046b3e2770" title="net.javaguides.springboot.service.building.\lBuildingService.getAllBuildings" alt="" coords="313,71,616,112"/>
+</map>

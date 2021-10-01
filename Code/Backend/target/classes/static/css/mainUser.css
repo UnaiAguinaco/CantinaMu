@@ -1,0 +1,230 @@
+:root {
+  --grid-rows: 1;
+  --grid-cols: 1;
+}
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+#main {
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  padding-bottom: 3rem;
+  padding-left: 3rem;
+  grid-template-areas:
+    "aside cboxes"
+    "aside calendar";
+}
+.all-right {
+  grid-area: cboxes;
+}
+
+.left-aside {
+  background-color: #014955;
+  border-radius: 1rem;
+  height: 75vh;
+}
+.button-edit {
+  border-radius: 2rem;
+  padding: 0.3rem 2rem;
+  border: none;
+  background: white;
+  color: #014955;
+}
+.button-cancel {
+  padding: 0.5rem 3rem;
+  border-radius: 56px;
+  font-size: 1.5rem;
+  border: none;
+  background: #eb5757;
+  color: white;
+}
+#myCalendar {
+  grid-area: calendar;
+
+  height: 75vh;
+}
+#myCalendar .container {
+  height: 75vh;
+}
+#myCalendar .container {
+  height: 75vh;
+}
+.month {
+  font-size: 2rem;
+}
+.calendar {
+  height: 75vh;
+  border-radius: 10px;
+  background-color: #014955;
+}
+
+.calendar ol li {
+  float: left;
+  width: 14.28571%;
+  padding: 1rem;
+}
+
+.calendar .day-names {
+  border-bottom: 1px solid white;
+  margin-bottom: 0;
+}
+
+.calendar .day-names li {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.calendar .days li {
+  border-bottom: 1px solid white;
+  min-height: 70px;
+}
+
+.calendar .days li .date {
+  margin: 0.2rem 0;
+}
+
+.calendar .days li .event {
+  font-size: 0.75rem;
+  padding: 0.4rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 3rem;
+}
+
+.calendar .days li .event.span-2 {
+  width: 200%;
+}
+
+.calendar .days li .event.begin {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.calendar .days li .event.end {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.calendar .days li .event.clear {
+  background: none;
+}
+
+.calendar .days li:nth-child(n + 29) {
+  border-bottom: none;
+}
+
+.calendar .days li.outside .date {
+  color: white;
+}
+.date {
+  color: white;
+}
+.calendar {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.calendar ol::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+#reserva {
+  display: grid;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  height: 60vh;
+  width: 60vw;
+  padding: 1rem;
+  column-gap: 32px;
+  row-gap: 16px;
+}
+
+aside {
+  grid-area: aside;
+  padding-bottom: 1rem;
+}
+
+#myRoom {
+  height: 50vh;
+}
+
+.show {
+  display: initial;
+}
+#smallDeviceCalendar {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  #aside,
+  #myCalendar {
+    display: none;
+  }
+  #smallDeviceCalendar {
+    width: 100vw;
+    height: 80vh;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  #smallCalendarlist {
+    width: 80%;
+  }
+  #main {
+    display: flex;
+    justify-content: center;
+  }
+  #selects {
+    padding: 0rem 0rem 0rem 0rem !important;
+    width: 90vw;
+  }
+  #selects div {
+    width: 100%;
+  }
+  .hide {
+    display: none !important;
+  }
+}
+@media (max-device-width: 1024px) {
+  #aside,
+  #myCalendar {
+    display: none;
+  }
+  #smallDeviceCalendar {
+    width: 100vw;
+    height: 80vh;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  #smallCalendarlist {
+    width: 80%;
+  }
+
+  #selects {
+    padding: 0rem 0rem 0rem 0rem !important;
+    width: 90vw;
+  }
+  #selects div {
+    width: 100%;
+  }
+  #main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hide {
+    display: none !important;
+  }
+}

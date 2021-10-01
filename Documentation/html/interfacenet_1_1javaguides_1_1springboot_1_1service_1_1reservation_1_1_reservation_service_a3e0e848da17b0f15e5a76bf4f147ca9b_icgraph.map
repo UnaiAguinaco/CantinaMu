@@ -1,0 +1,6 @@
+<map id="net.javaguides.springboot.service.reservation.ReservationService.getReservationByIdal" name="net.javaguides.springboot.service.reservation.ReservationService.getReservationByIdal">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_room_controller.html#aface47b086178d0d04c5067c0b9cb81c" title="net.javaguides.springboot.controller.\lRoomController.makeReservation" alt="" coords="377,5,637,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#a0ae06182c0db742248c7ccae23d24af6" title="net.javaguides.springboot.controller.\lUserController.deleteReservation" alt="" coords="377,71,637,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#a6fa0ccc62667179643bbc9aa85e03539" title="net.javaguides.springboot.controller.\lUserController.editReservation" alt="" coords="377,136,637,177"/>
+<area shape="rect" id="node5" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#a1dd2755ca3938e94bdde82cf6ad199f1" title="net.javaguides.springboot.controller.\lUserController.showReservation" alt="" coords="377,201,637,243"/>
+</map>

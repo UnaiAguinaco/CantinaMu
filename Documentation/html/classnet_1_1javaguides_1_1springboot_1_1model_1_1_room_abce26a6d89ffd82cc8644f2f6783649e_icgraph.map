@@ -1,0 +1,7 @@
+<map id="net.javaguides.springboot.model.Room.getIdRoom" name="net.javaguides.springboot.model.Room.getIdRoom">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_room_controller.html#a17afbe3a2cd4beedf6edfe934f46f3f5" title="net.javaguides.springboot.controller.\lRoomController.saveRoom" alt="" coords="293,5,553,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_room_controller.html#a92b215a0532759c3640a83427f910aea" title="net.javaguides.springboot.controller.\lRoomController.roomMap" alt="" coords="293,71,553,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#a9fe026ec5323643d88b1ba4c3ddf6a49" title="net.javaguides.springboot.controller.\lUserController.saveReservation" alt="" coords="293,136,553,177"/>
+<area shape="rect" id="node5" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#a1dd2755ca3938e94bdde82cf6ad199f1" title="net.javaguides.springboot.controller.\lUserController.showReservation" alt="" coords="293,201,553,243"/>
+<area shape="rect" id="node6" href="$classnet_1_1javaguides_1_1springboot_1_1_greeting_controller.html#ada7be9d174f792e2a33f6df7f85ac039" title="net.javaguides.springboot.\lGreetingController.sendMessage" alt="" coords="307,267,540,308"/>
+</map>

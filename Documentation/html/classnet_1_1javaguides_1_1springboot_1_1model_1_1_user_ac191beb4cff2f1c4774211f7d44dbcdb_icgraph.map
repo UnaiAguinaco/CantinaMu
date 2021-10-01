@@ -1,0 +1,4 @@
+<map id="net.javaguides.springboot.model.User.getEmail" name="net.javaguides.springboot.model.User.getEmail">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_faq_controller.html#aad9c97616c49e55583c4e8b32b659dab" title="net.javaguides.springboot.controller.\lFaqController.registerUserAccount" alt="" coords="302,5,562,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1service_1_1user_1_1_user_service_impl.html#ad5b60019bb5216ee5d0ffe3c0bcaed91" title="net.javaguides.springboot.service.user.\lUserServiceImpl.loadUserByUsername" alt="" coords="293,71,571,112"/>
+</map>

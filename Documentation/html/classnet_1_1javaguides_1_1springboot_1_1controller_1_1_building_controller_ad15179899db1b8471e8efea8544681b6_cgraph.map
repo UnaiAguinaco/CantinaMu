@@ -1,0 +1,4 @@
+<map id="net.javaguides.springboot.controller.BuildingController.saveBuilding" name="net.javaguides.springboot.controller.BuildingController.saveBuilding">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1_monitor.html#adeb7e6315a1917450367cb5b02e05daf" title="net.javaguides.springboot.\lMonitor.setWritter" alt="" coords="367,5,562,47"/>
+<area shape="rect" id="node3" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1building_1_1_building_service.html#af47d91e293004e0feadae478e455ad39" title="net.javaguides.springboot.service.building.\lBuildingService.saveBuilding" alt="" coords="313,71,616,112"/>
+</map>

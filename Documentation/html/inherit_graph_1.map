@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$interfacenet_1_1javaguides_1_1springboot_1_1chart_1_1_data_repository.html" title="net.javaguides.springboot.chart.\lDataRepository" alt="" coords="179,5,411,47"/>
+<area shape="rect" id="node3" href="$interfacenet_1_1javaguides_1_1springboot_1_1repository_1_1_building_repository.html" title="net.javaguides.springboot.repository.\lBuildingRepository" alt="" coords="164,71,427,112"/>
+<area shape="rect" id="node4" href="$interfacenet_1_1javaguides_1_1springboot_1_1repository_1_1_covid19_infections_repository.html" title="net.javaguides.springboot.repository.\lCovid19InfectionsRepository" alt="" coords="164,136,427,177"/>
+<area shape="rect" id="node5" href="$interfacenet_1_1javaguides_1_1springboot_1_1repository_1_1_desk_repository.html" title="net.javaguides.springboot.repository.\lDeskRepository" alt="" coords="164,201,427,243"/>
+<area shape="rect" id="node6" href="$interfacenet_1_1javaguides_1_1springboot_1_1repository_1_1_faq_repository.html" title="net.javaguides.springboot.repository.\lFaqRepository" alt="" coords="164,267,427,308"/>
+<area shape="rect" id="node7" href="$interfacenet_1_1javaguides_1_1springboot_1_1repository_1_1_notification_repository.html" title="net.javaguides.springboot.repository.\lNotificationRepository" alt="" coords="164,332,427,373"/>
+<area shape="rect" id="node8" href="$interfacenet_1_1javaguides_1_1springboot_1_1repository_1_1_reservation_repository.html" title="net.javaguides.springboot.repository.\lReservationRepository" alt="" coords="164,397,427,439"/>
+<area shape="rect" id="node9" href="$interfacenet_1_1javaguides_1_1springboot_1_1repository_1_1_room_record_repository.html" title="net.javaguides.springboot.repository.\lRoomRecordRepository" alt="" coords="164,463,427,504"/>
+<area shape="rect" id="node10" href="$interfacenet_1_1javaguides_1_1springboot_1_1repository_1_1_room_repository.html" title="net.javaguides.springboot.repository.\lRoomRepository" alt="" coords="164,528,427,569"/>
+<area shape="rect" id="node11" href="$interfacenet_1_1javaguides_1_1springboot_1_1repository_1_1_user_repository.html" title="net.javaguides.springboot.repository.\lUserRepository" alt="" coords="164,593,427,635"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="net.javaguides.springboot.service.building.BuildingServiceImpl.save" name="net.javaguides.springboot.service.building.BuildingServiceImpl.save">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1dto_1_1_building_registration_dto.html#a38a346e1526d480692b7b21566dc7284" title="net.javaguides.springboot.controller.dto.\lBuildingRegistrationDto.getId" alt="" coords="356,5,641,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1dto_1_1_building_registration_dto.html#a408cddcbe9870e0b710054623d76a081" title="net.javaguides.springboot.controller.dto.\lBuildingRegistrationDto.getName" alt="" coords="356,71,641,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1dto_1_1_building_registration_dto.html#ac7cc34aeda40b4f6fa5c4210b3bb49eb" title="net.javaguides.springboot.controller.dto.\lBuildingRegistrationDto.getAddress" alt="" coords="356,136,641,177"/>
+</map>

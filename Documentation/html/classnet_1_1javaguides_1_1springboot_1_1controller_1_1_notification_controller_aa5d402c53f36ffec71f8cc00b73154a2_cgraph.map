@@ -1,0 +1,5 @@
+<map id="net.javaguides.springboot.controller.NotificationController.registerUserAccount" name="net.javaguides.springboot.controller.NotificationController.registerUserAccount">
+<area shape="rect" id="node2" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1user_1_1_user_service.html#a43b164cfb6e5bb35f841d60072405f11" title="net.javaguides.springboot.service.user.\lUserService.getUserByUsername" alt="" coords="372,5,649,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_user.html#ac9ed3d96812657b2d448cead4132ef9e" title="net.javaguides.springboot.model.\lUser.getIdal" alt="" coords="391,71,631,112"/>
+<area shape="rect" id="node4" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1notification_1_1_notification_service.html#a096885f03a23f8b6d899415c363a3486" title="net.javaguides.springboot.service.notification.\lNotificationService.saveNotification" alt="" coords="349,136,672,177"/>
+</map>

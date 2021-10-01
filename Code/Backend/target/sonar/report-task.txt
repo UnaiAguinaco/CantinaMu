@@ -1,0 +1,6 @@
+projectKey=net.javaguides:springboot-thymeleaf-crud-web-app
+serverUrl=http://localhost:9000
+serverVersion=8.4.2.36762
+dashboardUrl=http://localhost:9000/dashboard?id=net.javaguides%3Aspringboot-thymeleaf-crud-web-app
+ceTaskId=AXc0cOkZJzIAiCW3ZZgJ
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXc0cOkZJzIAiCW3ZZgJ

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>MU Cantine</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" th:src="@{/js/script.js}"></script>
+    <header th:fragment="header">
+        <nav>
+            <svg id="navTop" viewBox="0 50 1720 194" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1720 159.367C608.707 154.117 395.95 239.852 0 159.367V0H1720V159.367Z" fill="#014955" />
+            </svg>
+            <div id="navContainer">
+
+                <div class="d-flex">
+                    <div class="panel panel-default leftIcon">
+                        <div id="asideButton" class="panel-heading" sec:authorize="hasAuthority('ROLE_ADMIN')">
+                            <a><i class="fas fa-bars fa-4x" style="color: white;"></i></a>
+                        </div>
+                        <div id="asideButton" class="panel-heading ml-5" sec:authorize="hasAuthority('ROLE_USER')">
+
+                        </div>
+                    </div>
+                    <svg class="pt-5" id="logo" viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a sec:authorize="hasAuthority('ROLE_ADMIN')" href="/" th:href="@{/admin/main}">
+                            <path
+                                d="M4 26.1099V11.9457C4 9.12317 5.7759 6.19322 8.3561 5.04896C10.8408 3.94703 14.3836 3.50537 22 7.10994M22 7.10994V26.1099M22 7.10994C27.6305 4.36471 31.9232 3.24751 36.7918 5.52898C38.5721 6.36323 39.5 8.28254 39.5 10.2486V17.9941C39.5 19.9475 40.4285 21.818 42.1123 22.8082C47.1284 25.758 50.5885 25.717 55.1144 22.8154C56.6724 21.8165 57.5 20.0276 57.5 18.177V10.4743C57.5 8.38447 58.5596 6.3867 60.4488 5.49322C64.6314 3.51515 68.0279 3.47621 72.7921 5.53269C74.8135 6.40522 76 8.48139 76 10.683V26.1099"
+                                stroke="white" stroke-width="8" />
+                        </a>
+                        <a sec:authorize="hasAuthority('ROLE_USER')" href="/" th:href="@{/user/main}">
+                            <path
+                                d="M4 26.1099V11.9457C4 9.12317 5.7759 6.19322 8.3561 5.04896C10.8408 3.94703 14.3836 3.50537 22 7.10994M22 7.10994V26.1099M22 7.10994C27.6305 4.36471 31.9232 3.24751 36.7918 5.52898C38.5721 6.36323 39.5 8.28254 39.5 10.2486V17.9941C39.5 19.9475 40.4285 21.818 42.1123 22.8082C47.1284 25.758 50.5885 25.717 55.1144 22.8154C56.6724 21.8165 57.5 20.0276 57.5 18.177V10.4743C57.5 8.38447 58.5596 6.3867 60.4488 5.49322C64.6314 3.51515 68.0279 3.47621 72.7921 5.53269C74.8135 6.40522 76 8.48139 76 10.683V26.1099"
+                                stroke="white" stroke-width="8" />
+                    </svg>
+                    </a>
+                </div>
+                <div class="headerButtons">
+                    <div id="bell">
+                        <i class="far fa-bell fa-3x"></i>
+                        <span th:inline="text" class="notificationCount">[[${notificationCount}]]</span>
+                    </div>
+                    <a href="/" th:href="@{/faq}" style="color: white;">
+                        <i class="far fa-question-circle fa-3x"></i>
+                    </a>
+                    <a href="/" th:href="@{/userSettings}" style="color: white;">
+                        <i class="far fa-user-circle fa-3x"></i>
+                    </a>
+
+                </div>
+        </nav>
+    </header>
+</body>
+
+</html>

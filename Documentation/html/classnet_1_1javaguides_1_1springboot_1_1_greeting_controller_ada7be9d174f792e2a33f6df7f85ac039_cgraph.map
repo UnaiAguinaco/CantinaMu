@@ -1,0 +1,6 @@
+<map id="net.javaguides.springboot.GreetingController.sendMessage" name="net.javaguides.springboot.GreetingController.sendMessage">
+<area shape="rect" id="node2" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1room_1_1_room_service.html#af0db7bf2fc06cff3e26480331317fc1c" title="net.javaguides.springboot.service.room.\lRoomService.getAllRooms" alt="" coords="307,5,591,47"/>
+<area shape="rect" id="node3" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1desk_1_1_desk_service.html#ac22999c2dbf645ac4dea0a622493cca4" title="net.javaguides.springboot.service.desk.\lDeskService.getAllDesk" alt="" coords="308,71,589,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_room.html#abce26a6d89ffd82cc8644f2f6783649e" title="net.javaguides.springboot.model.\lRoom.getIdRoom" alt="" coords="329,136,569,177"/>
+<area shape="rect" id="node5" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1reservation_1_1_reservation_service.html#a1d108bfd566d4598e6437a05beba898a" title="net.javaguides.springboot.service.reservation.\lReservationService.getAllReservations" alt="" coords="287,201,611,243"/>
+</map>

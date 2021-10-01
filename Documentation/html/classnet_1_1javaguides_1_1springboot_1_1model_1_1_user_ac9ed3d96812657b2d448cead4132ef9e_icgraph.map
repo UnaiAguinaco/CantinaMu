@@ -1,0 +1,8 @@
+<map id="net.javaguides.springboot.model.User.getIdal" name="net.javaguides.springboot.model.User.getIdal">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_admin_controller.html#a23bb633db8a0e1490dd00890b3855ba0" title="net.javaguides.springboot.controller.\lAdminController.update" alt="" coords="311,5,571,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_faq_controller.html#aad9c97616c49e55583c4e8b32b659dab" title="net.javaguides.springboot.controller.\lFaqController.registerUserAccount" alt="" coords="311,71,571,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_notification_controller.html#aa5d402c53f36ffec71f8cc00b73154a2" title="net.javaguides.springboot.controller.\lNotificationController.registerUserAccount" alt="" coords="293,136,589,177"/>
+<area shape="rect" id="node5" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#aad443d371e2193d565dd1956818e9536" title="net.javaguides.springboot.controller.\lUserController.main_user" alt="" coords="311,201,571,243"/>
+<area shape="rect" id="node6" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_faq_controller.html#a985f99580f29de105309ebd79317d38c" title="net.javaguides.springboot.controller.\lFaqController.faqAdmin" alt="" coords="637,168,897,209"/>
+<area shape="rect" id="node7" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#a632c7a174a9c916399a9f26f8b21c547" title="net.javaguides.springboot.controller.\lUserController.user_settings" alt="" coords="637,233,897,275"/>
+</map>

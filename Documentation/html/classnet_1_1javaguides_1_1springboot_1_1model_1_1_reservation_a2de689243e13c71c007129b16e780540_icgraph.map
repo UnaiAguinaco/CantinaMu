@@ -1,0 +1,6 @@
+<map id="net.javaguides.springboot.model.Reservation.setIdBuilding" name="net.javaguides.springboot.model.Reservation.setIdBuilding">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#aad443d371e2193d565dd1956818e9536" title="net.javaguides.springboot.controller.\lUserController.main_user" alt="" coords="293,37,553,79"/>
+<area shape="rect" id="node5" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#a6fa0ccc62667179643bbc9aa85e03539" title="net.javaguides.springboot.controller.\lUserController.editReservation" alt="" coords="293,103,553,144"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_faq_controller.html#a985f99580f29de105309ebd79317d38c" title="net.javaguides.springboot.controller.\lFaqController.faqAdmin" alt="" coords="601,5,861,47"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#a632c7a174a9c916399a9f26f8b21c547" title="net.javaguides.springboot.controller.\lUserController.user_settings" alt="" coords="601,71,861,112"/>
+</map>

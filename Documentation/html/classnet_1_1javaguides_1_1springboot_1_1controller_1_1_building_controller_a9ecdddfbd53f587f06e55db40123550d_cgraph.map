@@ -1,0 +1,6 @@
+<map id="net.javaguides.springboot.controller.BuildingController.showFormForUpdate" name="net.javaguides.springboot.controller.BuildingController.showFormForUpdate">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1_monitor.html#a1ff5dbcdc9b3da76b675f5e7400d3876" title="net.javaguides.springboot.\lMonitor.getWritter" alt="" coords="383,5,578,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1_monitor.html#aa9f6e5d529ceaa392a7b9a80f285d528" title="net.javaguides.springboot.\lMonitor.getReaderInside" alt="" coords="383,71,578,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1_monitor.html#adeb7e6315a1917450367cb5b02e05daf" title="net.javaguides.springboot.\lMonitor.setWritter" alt="" coords="383,136,578,177"/>
+<area shape="rect" id="node5" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1building_1_1_building_service.html#a2bf93fa8d6cc23c79c0f5b852fffb011" title="net.javaguides.springboot.service.building.\lBuildingService.getBuildingById" alt="" coords="329,201,632,243"/>
+</map>

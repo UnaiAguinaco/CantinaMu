@@ -1,0 +1,9 @@
+<map id="net.javaguides.springboot.controller.RoomController.saveRoom" name="net.javaguides.springboot.controller.RoomController.saveRoom">
+<area shape="rect" id="node2" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1desk_1_1_desk_service.html#ac22999c2dbf645ac4dea0a622493cca4" title="net.javaguides.springboot.service.desk.\lDeskService.getAllDesk" alt="" coords="315,5,596,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_desk.html#a487f6bb4d29ae1bf466a8194b22ef2e6" title="net.javaguides.springboot.model.\lDesk.getIdRoom" alt="" coords="335,71,575,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_room.html#abce26a6d89ffd82cc8644f2f6783649e" title="net.javaguides.springboot.model.\lRoom.getIdRoom" alt="" coords="335,136,575,177"/>
+<area shape="rect" id="node5" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1desk_1_1_desk_service.html#aa952d1355f6e720a96f5fe63d311a531" title="net.javaguides.springboot.service.desk.\lDeskService.deleteDeskById" alt="" coords="315,201,596,243"/>
+<area shape="rect" id="node6" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_desk.html#add57a905a94ae741691626cfc2e0b78a" title="net.javaguides.springboot.model.\lDesk.getIdDesk" alt="" coords="335,267,575,308"/>
+<area shape="rect" id="node7" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1room_1_1_room_service.html#a0150eb5177613a4e66dc07fc3370ac95" title="net.javaguides.springboot.service.room.\lRoomService.getRoomById" alt="" coords="313,332,597,373"/>
+<area shape="rect" id="node8" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1desk_1_1_desk_service.html#a89f95dd0053f13d8245c14ca2903c7c8" title="net.javaguides.springboot.service.desk.\lDeskService.saveDesk" alt="" coords="315,397,596,439"/>
+</map>

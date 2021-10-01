@@ -1,0 +1,8 @@
+<map id="net.javaguides.springboot.controller.FaqController.registerUserAccount" name="net.javaguides.springboot.controller.FaqController.registerUserAccount">
+<area shape="rect" id="node2" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1user_1_1_user_service.html#a43b164cfb6e5bb35f841d60072405f11" title="net.javaguides.springboot.service.user.\lUserService.getUserByUsername" alt="" coords="313,5,591,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_user.html#ae0c4ecfad1d7fce366d441fbebbbe96a" title="net.javaguides.springboot.model.\lUser.setIdal" alt="" coords="332,71,572,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_user.html#ac9ed3d96812657b2d448cead4132ef9e" title="net.javaguides.springboot.model.\lUser.getIdal" alt="" coords="332,136,572,177"/>
+<area shape="rect" id="node5" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1faq_1_1_faq_service.html#a13d7b4deb7e3615c602b1e2b0f149d95" title="net.javaguides.springboot.service.faq.\lFaqService.saveFaq" alt="" coords="317,201,587,243"/>
+<area shape="rect" id="node6" href="$classnet_1_1javaguides_1_1springboot_1_1service_1_1_email_service.html#a7ec91732eb1e9ba9af32e2ce32935208" title="net.javaguides.springboot.service.\lEmailService.sendMail" alt="" coords="329,267,575,308"/>
+<area shape="rect" id="node7" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_user.html#ac191beb4cff2f1c4774211f7d44dbcdb" title="net.javaguides.springboot.model.\lUser.getEmail" alt="" coords="332,332,572,373"/>
+</map>

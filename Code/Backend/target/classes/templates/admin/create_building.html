@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MU Cantine</title>
+    <link rel="icon" th:href="@{/img/icon.ico}" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/f9d1ffcb95.js" crossorigin="anonymous"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/create_building.css}" rel="stylesheet" />
+    <link th:href="@{/css/global.css}" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <header th:replace="fragments/header :: header"></header>
+    <aside class=" sideBar hide">
+        <div th:replace="fragments/leftNav :: leftNav"></div>
+    </aside>
+    <aside class=" notificationBar hide">
+        <div th:replace="fragments/rightNav :: rightNav"></div>
+    </aside>
+    <main class="d-flex flex-column justify-content-center align-items-center">
+        <div class="mainDiv d-flex align-items-center whitebg pl-5 box">
+
+            <div class="h-100 d-flex flex-column align-items-center buildingForm ">
+
+                <form id="saveBuilding" th:action="@{/admin/create_building}" method="post" th:object="${building}"
+                    style="width: 100%;">
+                    <h1 th:text="#{building.data}" class="pb-4 pt-2"></h1>
+                    <div class="form-group">
+                        <label th:text="#{building.id}" for="bname"></label> :<br>
+                        <input type="text" class="loginData" th:field="*{id}" name="bid" placeholder="11"
+                            autofocus="autofocus" style="width: 80%; font-size: 1.5rem;">
+                    </div>
+                    <div class="form-group">
+                        <label th:text="#{building.fullname}" for="bname"></label> :<br>
+                        <input type="text" class="loginData" th:field="*{name}" name="bname"
+                            th:placeholder="#{building.pname}" style="width: 80%; font-size: 1.5rem;">
+                    </div>
+                    <div class="form-group">
+                        <label th:text="#{building.address}" for="baddress"></label>: <br><input type="text"
+                            th:field="*{address}" name="baddress" class="loginData"
+                            th:placeholder="#{building.paddress}" style="width: 80%; font-size: 1.5rem;" />
+                    </div>
+
+                </form>
+                <div class="d-flex justify-content-around mt-5 mb-2" style="width: 30%;">
+                    <input id="create_building-submit" class="button-confirm" th:value="#{button.confirm}" />
+                    <a th:text="#{button.cancel}" href="/" th:href="@{/admin/main}" id="errorButton"
+                        class="button-cancel"></a>
+                </div>
+            </div>
+            <div class="h-100 buildingIcon" style="width: 40%; ">
+                <i class="fas fa-city d-flex justify-content-center align-items-center"
+                    style="font-size: 20rem; color: #014955;"></i>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript">
+        document.querySelector("#create_building-submit").addEventListener("click", submit);
+        function submit(params) {
+            document.querySelector("#saveBuilding").submit();
+        }
+    </script>
+    <script type="text/javascript" th:src="@{/js/script.js}"></script>
+    <script type="text/javascript" th:src="@{/js/notificationNav.js}"></script>
+    <script type="text/javascript" th:src="@{/js/optionNav.js}"></script>
+</body>
+
+</html>

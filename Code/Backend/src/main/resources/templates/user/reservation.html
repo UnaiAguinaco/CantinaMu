@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MU Cantine</title>
+    <link rel="icon" th:href="@{/img/icon.ico}" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/f9d1ffcb95.js" crossorigin="anonymous"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/room.css}" rel="stylesheet" />
+    <link th:href="@{/css/global.css}" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <header th:replace="fragments/header :: header"></header>
+    <aside class=" notificationBar hide">
+        <div th:replace="fragments/rightNav :: rightNav"></div>
+    </aside>
+    <main class="d-flex flex-column justify-content-center align-items-center w-100">
+        <div id="roomMap" class=" show">
+            <div id="rows" th:text="${newRoom.rowCount}" class="hide"></div>
+            <div id="cols" th:text="${newRoom.columnCount}" class="hide"></div>
+            <div class="d-flex justify-content-between align-items-center" style="width: 100%;">
+
+                <div class="d-flex justify-content-around" style="width: 50%;">
+                    <div class="d-flex justify-content-center pl-3">
+                        <div class="cuadrado mt-1 mr-2" style="background-color: green; height: 1rem; width: 1rem;">
+                        </div>
+                        <p th:text="#{reservation.free}">Free</p>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="cuadrado mt-1 mr-2" style="background-color: orange; height: 1rem; width: 1rem;">
+                        </div>
+                        <p th:text="#{reservation.selected}">Selected</p>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="cuadrado mt-1 mr-2" style="background-color: red; height: 1rem; width: 1rem;"></div>
+                        <p th:text="#{reservation.reserved}">Reserved</p>
+                    </div>
+                </div>
+                <p th:text="#{reservation.click}">Click on a box to reserve the desk</p>
+            </div>
+            <form th:action="@{/user/saveReservation}" method="post" id="saveReservation">
+                <input class="reserveIdRoom" type="hidden" th:field="*{reservation.idRoom.idRoom}">
+                <input class="reserveIdBuilding" type="hidden" th:field="*{reservation.idBuilding.idBuilding}">
+                <input id="reservedDesk" type="hidden" th:field="*{reservation.deskId.idDesk}">
+                <input type="hidden" th:field="*{reservation.userId.idal}">
+                <input class="reserveTime" type="hidden" th:field="*{reservation.time}">
+                <div class="room h-100 ml-5 mt-3">
+                    <div id="reserva">
+                        <div th:each="desk,status : ${newResDesks.desks}" th:class="mesa+ ' ' + ${desk.type}"
+                            style="display: flex; justify-content: center;align-items: center;">
+                            <input type="hidden" th:field="*{newResDesks.desks[__${status.index}__].idDesk}">
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <svg class="hide pt-5" id="chargeLogo" width="25%" height="25%" viewBox="0 0 82 34" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1 13.8927V29.1395C1 29.8466 1 30.2001 1.1505 30.5658C1.301 30.9315 1.49861 31.1309 1.89382 31.5297C5.00949 34.674 8.01126 33.2027 9.70528 31.4614C10.0391 31.1183 10.206 30.9467 10.353 30.5848C10.5 30.2228 10.5 29.8987 10.5 29.2505V14.8007C10.5 14.1188 10.5 13.7779 10.6512 13.4115C10.8023 13.0451 10.9814 12.865 11.3395 12.5049C13.7328 10.0981 16.158 11.1525 17.637 12.5301C17.9909 12.8597 18.1678 13.0245 18.3339 13.4062C18.5 13.7879 18.5 14.1255 18.5 14.8007V29.1395C18.5 29.8471 18.5 30.201 18.6526 30.5688C18.8051 30.9367 19.0023 31.1335 19.3965 31.5271L19.3965 31.5271C22.5257 34.6508 25.7213 33.2253 27.5819 31.5011C27.9711 31.1405 28.1657 30.9601 28.3329 30.5774C28.5 30.1947 28.5 29.8429 28.5 29.1395V14.9279C28.5 14.1824 28.5 13.8097 28.6746 13.4197C28.8491 13.0298 29.0602 12.8413 29.4824 12.4642C32.1212 10.1075 34.6326 11.1627 36.1323 12.5347C36.4845 12.857 36.6606 13.0182 36.8303 13.4034C37 13.7886 37 14.126 37 14.8007V19.5586C37 22.1553 37 23.4537 37.6559 24.8602C38.3118 26.2667 39.0196 26.8606 40.4351 28.0483C49.1881 35.3923 57.829 30.4659 61.7995 26.9436C62.4455 26.3704 62.7685 26.0839 63.3843 24.7145C64 23.3452 64 22.6285 64 21.195V15.1569C64 14.2924 64 13.8602 64.2403 13.4153C64.4806 12.9704 64.7464 12.7962 65.2781 12.4477C67.6495 10.8931 69.8901 11.5343 71.3504 12.5108C71.8022 12.8128 72.028 12.9639 72.264 13.4056C72.5 13.8472 72.5 14.2384 72.5 15.0208V29.0348C72.5 29.7924 72.5 30.1712 72.6649 30.5518C72.8299 30.9323 73.056 31.1442 73.5084 31.5681C76.884 34.731 79.5835 33.1278 80.9515 31.3449C81.1757 31.0527 81.2877 30.9067 81.3939 30.594C81.5 30.2813 81.5 30.0181 81.5 29.4915V10.5C80.0828 0.579776 62.1523 -2.19952 55.9598 8.48706C55.5942 9.11806 55.4114 9.43356 55.2057 10.1987C55 10.9639 55 11.552 55 12.7281V16V19.8431C55 20.6967 55 21.1235 54.7966 21.5394C54.5932 21.9553 54.3151 22.1715 53.759 22.6039C49.9449 25.5697 47.3068 23.6318 46.154 22.3585C45.8964 22.0741 45.7676 21.9318 45.6338 21.5846C45.5 21.2374 45.5 20.9645 45.5 20.4186V12.2281C45.5 11.0492 45.5 10.4597 45.3206 9.74268C45.1413 9.0257 44.953 8.67297 44.5765 7.96751C39.0095 -2.46345 26.8027 1.95549 23.5 4C21.8333 2.5 16.5 0.400008 10.5 2.00001C5.32451 3.38014 2.50517 8.08367 1.40018 11.1688C1.25139 11.5841 1.177 11.7918 1.0885 12.3014C1 12.8109 1 13.1715 1 13.8927Z"
+                stroke="#014955" />
+        </svg>
+        <div class=" d-flex justify-content-around mt-4" style="width: 50%;">
+            <a th:href="@{/user/main}" th:text="#{button.cancel}" id="newReservationCnl" class="button-cancel"></a>
+        </div>
+        </form>
+
+    </main>
+    <script type="text/javascript" th:src="@{/js/reservation.js}"></script>
+    <script type="text/javascript" th:src="@{/js/notificationNav.js}"></script>
+    <script sec:authorize="hasAuthority('ROLE_ADMIN')" type="text/javascript" th:src="@{/js/optionNav.js}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script type="text/javascript" th:src="@{/js/webSocket.js}"></script>
+</body>
+
+</html>

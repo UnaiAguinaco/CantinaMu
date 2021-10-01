@@ -1,0 +1,4 @@
+<map id="net.javaguides.springboot.controller.UserController.remainingDesks" name="net.javaguides.springboot.controller.UserController.remainingDesks">
+<area shape="rect" id="node2" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1reservation_1_1_reservation_service.html#a1d108bfd566d4598e6437a05beba898a" title="net.javaguides.springboot.service.reservation.\lReservationService.getAllReservations" alt="" coords="313,5,637,47"/>
+<area shape="rect" id="node3" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1desk_1_1_desk_service.html#ac22999c2dbf645ac4dea0a622493cca4" title="net.javaguides.springboot.service.desk.\lDeskService.getAllDesk" alt="" coords="335,71,616,112"/>
+</map>

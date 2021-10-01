@@ -1,0 +1,75 @@
+h1 {
+  color: #014955;
+  font-size: 3.5rem;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #014955;
+}
+.loginData {
+  border: 2px solid var(--Color3);
+  padding: 1.7rem 6rem;
+  border-radius: 56px;
+}
+.loginRight > svg {
+  height: 73vh;
+}
+
+.loginDiv {
+  width: 60vw;
+  height: 70vh;
+  background: white;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.loginLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 5rem;
+}
+.loginText {
+  text-align: center;
+}
+.loginData {
+  border: 2px solid var(--Color3);
+  padding: 1.7rem 6rem;
+  border-radius: 56px;
+}
+
+input[type="text"] {
+  font-size: 1.5rem;
+}
+input[type="password"] {
+  font-size: 1.5rem;
+}
+
+label {
+  font-size: 1.5rem;
+}
+#idalSvg {
+  height: 5vh;
+}
+
+@media screen and (max-width: 1024px) {
+  .loginRight {
+    display: none;
+  }
+}
+@media (max-device-width: 1024px) {
+  .loginRight {
+    display: none;
+  }
+  .loginDiv,
+  .loginLeft {
+    height: 50vh;
+  }
+}

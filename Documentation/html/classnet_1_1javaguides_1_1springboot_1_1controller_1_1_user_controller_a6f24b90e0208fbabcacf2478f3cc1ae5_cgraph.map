@@ -1,0 +1,9 @@
+<map id="net.javaguides.springboot.controller.UserController.changePassword" name="net.javaguides.springboot.controller.UserController.changePassword">
+<area shape="rect" id="node2" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1user_1_1_user_service.html#a43b164cfb6e5bb35f841d60072405f11" title="net.javaguides.springboot.service.user.\lUserService.getUserByUsername" alt="" coords="313,5,591,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_change_password.html#a5077e634a8d2ad58a66fa46ca6560904" title="net.javaguides.springboot.model.\lChangePassword.getOldPassword" alt="" coords="332,71,572,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_user.html#ab330952c6e8a24541f821d7daee63fae" title="net.javaguides.springboot.model.\lUser.getPassword" alt="" coords="332,136,572,177"/>
+<area shape="rect" id="node5" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_change_password.html#a160a172b2f5938fd41bc22b1a36951e6" title="net.javaguides.springboot.model.\lChangePassword.getNewPassword" alt="" coords="329,201,575,243"/>
+<area shape="rect" id="node6" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_change_password.html#aa4851be80a6273b578456f5f21a7deb2" title="net.javaguides.springboot.model.\lChangePassword.getRepeatPassword" alt="" coords="321,267,583,308"/>
+<area shape="rect" id="node7" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_user.html#a83be189ec909461615dd8d931bdee13a" title="net.javaguides.springboot.model.\lUser.setPassword" alt="" coords="332,332,572,373"/>
+<area shape="rect" id="node8" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1user_1_1_user_service.html#a8fb0e8c7474ac03055891766c80e6228" title="net.javaguides.springboot.service.user.\lUserService.saveUser" alt="" coords="313,397,591,439"/>
+</map>

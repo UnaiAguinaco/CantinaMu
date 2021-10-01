@@ -1,0 +1,8 @@
+<map id="net.javaguides.springboot.test.testear" name="net.javaguides.springboot.test.testear">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1dto_1_1_user_registration_dto.html#a9cd8028f6c4fb2018536bceab674318b" title="net.javaguides.springboot.controller.dto.\lUserRegistrationDto.setFirstName" alt="" coords="324,39,609,80"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1service_1_1user_1_1_user_service_impl.html#af0633e74bd7749cc7b40c5c20e3dab7d" title="net.javaguides.springboot.service.user.\lUserServiceImpl.save" alt="" coords="328,104,605,145"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1dto_1_1_user_registration_dto.html#a400024246968ccc471469e0f5e3458fc" title="net.javaguides.springboot.controller.dto.\lUserRegistrationDto.getEmail" alt="" coords="657,5,943,47"/>
+<area shape="rect" id="node5" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1dto_1_1_user_registration_dto.html#aa129d1da4dfcf8a2ad74a4386cd81f26" title="net.javaguides.springboot.controller.dto.\lUserRegistrationDto.getFirstName" alt="" coords="657,71,943,112"/>
+<area shape="rect" id="node6" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1dto_1_1_user_registration_dto.html#a63d0ef9f0f7c4bf27a6b5c9aff5c46b5" title="net.javaguides.springboot.controller.dto.\lUserRegistrationDto.getLastName" alt="" coords="657,136,943,177"/>
+<area shape="rect" id="node7" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1dto_1_1_user_registration_dto.html#a56f8af436b080479ab71ed7a589e9076" title="net.javaguides.springboot.controller.dto.\lUserRegistrationDto.getPassword" alt="" coords="657,201,943,243"/>
+</map>

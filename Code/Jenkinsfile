@@ -1,0 +1,50 @@
+pipeline {
+    agent any
+    
+    stages {
+	stage('Preparation of the workspace'){
+            steps{
+		echo 'Preparation'
+		cleanWs();
+	    }
+	}
+        stage('Build') {
+            steps {
+		echo 'Build stage'
+                git branch: 'jenkins',
+                credentialsId: 'a68cfc3c-3541-4e61-8962-865f89f2190f',
+                url: 'https://gitlab.danz.eus/m2gi13/2021/part1/popbl_t2/popbl5.git'
+            }
+        }
+        stage('SonarQube scan') {
+          environment {
+            SCANNER_HOME = tool 'SonarQubeScanner'
+            ORGANIZATION = "MU-CANTINA"
+            PROJECT_NAME = "My popbl"
+          }
+          steps {
+	    echo 'SonarQube scan stage'
+            withSonarQubeEnv('sonarqube') {
+                sh '''$SCANNER_HOME/bin/sonar-scanner \
+                -Dsonar.java.binaries=. \
+                -Dsonar.projectKey=springboot-thymeleaf-crud-web-app \
+                -Dsonar.sources=Code/Backend/src'''
+            }
+          }
+        }
+        stage('Test'){
+            steps{
+	       echo 'Test stage'
+               dir("Code/Backend"){
+                   sh "mvn test"
+               }
+            }
+            post{
+                always{
+                    junit '**/target/surefire-reports/*.xml'
+                }
+            }
+        }
+    }
+}
+

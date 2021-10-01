@@ -1,0 +1,11 @@
+<map id="net.javaguides.springboot.controller.RoomController.roomMap" name="net.javaguides.springboot.controller.RoomController.roomMap">
+<area shape="rect" id="node2" href="$interfacenet_1_1javaguides_1_1springboot_1_1service_1_1room_1_1_room_service.html#a0150eb5177613a4e66dc07fc3370ac95" title="net.javaguides.springboot.service.room.\lRoomService.getRoomById" alt="" coords="313,5,597,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_room.html#ab8fd41cdf0a315082f76140c743b2abd" title="net.javaguides.springboot.model.\lRoom.getRowCount" alt="" coords="335,71,575,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_room.html#a22149f9f925cb5c3f151419ae9d0cfc1" title="net.javaguides.springboot.model.\lRoom.getColumnCount" alt="" coords="335,136,575,177"/>
+<area shape="rect" id="node5" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_desk.html#aac671e61f8bab3083804a70da7ac82a6" title="net.javaguides.springboot.model.\lDesk.setIdRoom" alt="" coords="335,201,575,243"/>
+<area shape="rect" id="node6" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_room.html#abce26a6d89ffd82cc8644f2f6783649e" title="net.javaguides.springboot.model.\lRoom.getIdRoom" alt="" coords="335,267,575,308"/>
+<area shape="rect" id="node7" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_desk.html#affd824c0ffa5b514681812cefbbbed83" title="net.javaguides.springboot.model.\lDesk.setDeskNumber" alt="" coords="335,332,575,373"/>
+<area shape="rect" id="node8" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_desk.html#a5014b0c67394ee5e2857dea7cee65452" title="net.javaguides.springboot.model.\lDesk.setRow" alt="" coords="335,397,575,439"/>
+<area shape="rect" id="node9" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_desk.html#a2789668a6bcfdbced301655a0e68d6f8" title="net.javaguides.springboot.model.\lDesk.setColumn" alt="" coords="335,463,575,504"/>
+<area shape="rect" id="node10" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_desk.html#a30feb1ec3828d11466d7ac84bcf4e857" title="net.javaguides.springboot.model.\lDesk.setType" alt="" coords="335,528,575,569"/>
+</map>

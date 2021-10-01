@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MU Cantine</title>
+    <link rel="icon" th:href="@{/img/icon.ico}" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/f9d1ffcb95.js" crossorigin="anonymous"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/room.css}" rel="stylesheet" />
+    <link th:href="@{/css/create_building.css}" rel="stylesheet" />
+    <link th:href="@{/css/global.css}" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <header th:replace="fragments/header :: header"></header>
+    <aside class=" sideBar hide">
+        <div th:replace="fragments/leftNav :: leftNav"></div>
+    </aside>
+    <aside class=" notificationBar hide">
+        <div th:replace="fragments/rightNav :: rightNav"></div>
+    </aside>
+    <main class="d-flex flex-column justify-content-center align-items-center w-100">
+        <div>
+            <div id="rows" th:text="${newRoom.rowCount}" class="hide"></div>
+            <div id="cols" th:text="${newRoom.columnCount}" class="hide"></div>
+            <form id="deleteRoom" th:action="@{/admin/deleteRoom/{id}(id=${newRoom.idRoom})}" method="GET"></form>
+            <form id="createRoom" th:action="@{/admin/saveDesks/{id}(id=${newRoom.idRoom})}" method="post">
+                <div class="room h-100 ml-5 mt-5">
+                    <div id="reserva">
+                        <div th:each="desk,status : ${deskList.desks}" th:class="mesa+ ' ' + ${desk.type}"
+                            style="display: flex; justify-content: center;align-items: center;">
+                            <input class="typeInput" type="hidden"
+                                th:field="*{deskList.desks[__${status.index}__].type}">
+                            <input type="hidden" th:field="*{deskList.desks[__${status.index}__].idDesk}">
+                            <input type="hidden" th:field="*{deskList.desks[__${status.index}__].row}">
+                            <input type="hidden" th:field="*{deskList.desks[__${status.index}__].column}">
+                            <input type="hidden" th:field="*{deskList.desks[__${status.index}__].deskNumber}">
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        </form>
+        <div class=" d-flex justify-content-around mt-4" style="width: 50%;">
+            <button th:text="#{button.confirm}" id="newRoomAcp" class="button-confirm"></button>
+            <button th:text="#{button.cancel}" id="newRoomCnl" class="button-cancel"></button>
+        </div>
+    </main>
+    <script type="text/javascript">
+        document.querySelector("#newRoomAcp").addEventListener("click", submit);
+        function submit(params) {
+            document.querySelector("#createRoom").submit();
+        }
+        document.querySelector("#newRoomCnl").addEventListener("click", submit2);
+        function submit2(params) {
+            document.querySelector("#deleteRoom").submit();
+        }
+    </script>
+    <script type="text/javascript" th:src="@{/js/roomMap.js}"></script>
+    <script type="text/javascript" th:src="@{/js/notificationNav.js}"></script>
+    <script type="text/javascript" th:src="@{/js/optionNav.js}"></script>
+</body>
+
+</html>

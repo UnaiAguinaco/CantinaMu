@@ -1,0 +1,106 @@
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  #finder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  #search {
+    width: 80%;
+    border-radius: 46px;
+    border: 1px solid var(--Color3);
+    padding-left: 2rem;
+  }
+  
+  .list-group {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 60vh;
+  }
+  .userItems {
+    font-size: 1.7rem;
+    border: none;
+    display: grid;
+    grid-template-columns: 10% 20% 40% 30%;
+    grid-template-rows: 1fr;
+    text-align: end;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .userName,
+  .userEmail {
+    text-align: left;
+  }
+  .userName {
+    margin-left: 4rem;
+  }
+  .covidStatus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .covidStatus > p {
+    margin-right: 2rem;
+  }
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eb5757;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    height: 2rem;
+    width: 5rem;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3px;
+    background-color: var(--Color3);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #27ae60;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #27ae60;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

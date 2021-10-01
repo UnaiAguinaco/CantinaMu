@@ -1,0 +1,6 @@
+<map id="net.javaguides.springboot.service.room.RoomService.getRoomById" name="net.javaguides.springboot.service.room.RoomService.getRoomById">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_room_controller.html#a17afbe3a2cd4beedf6edfe934f46f3f5" title="net.javaguides.springboot.controller.\lRoomController.saveRoom" alt="" coords="337,5,597,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_room_controller.html#a92b215a0532759c3640a83427f910aea" title="net.javaguides.springboot.controller.\lRoomController.roomMap" alt="" coords="337,71,597,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_room_controller.html#a3bc1efb0ec02c4a3c8dd5b5ad245d36f" title="net.javaguides.springboot.controller.\lRoomController.update_room" alt="" coords="337,136,597,177"/>
+<area shape="rect" id="node5" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_room_controller.html#aface47b086178d0d04c5067c0b9cb81c" title="net.javaguides.springboot.controller.\lRoomController.makeReservation" alt="" coords="337,201,597,243"/>
+</map>

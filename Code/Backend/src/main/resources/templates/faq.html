@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MU Cantine</title>
+    <link rel="icon" th:href="@{/img/icon.ico}" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/f9d1ffcb95.js" crossorigin="anonymous"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/faq.css}" rel="stylesheet" />
+    <link th:href="@{/css/global.css}" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <header th:replace="fragments/header :: header"></header>
+    <aside class=" sideBar hide">
+        <div th:replace="fragments/leftNav :: leftNav"></div>
+    </aside>
+    <aside class=" notificationBar hide">
+        <div th:replace="fragments/rightNav :: rightNav"></div>
+    </aside>
+    <main>
+        <div class="container">
+            <div id="faqContainer">
+                <div id="finder">
+                    <h2 th:text="#{faq.title}"></h2>
+                </div>
+                <hr>
+                <ul class="list-group" id="faqList">
+                    <th:block th:each="faq : ${faqList}">
+                        <div th:if="${faq.faq}">
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading active d-flex justify-content-between" role="tab"
+                                        th:id="'heading'+${#strings.toString(faq.id_question)}">
+                                        <h4 class="panel-title h3">
+                                            <a th:utext="${faq.definition}"></a>
+                                        </h4>
+                                        <div class="faqIcons">
+                                            <a th:href="@{/faq/delete/{id}(id=${faq.id_question})}"
+                                                style="color: black;"><i sec:authorize="hasAuthority('ROLE_ADMIN')"
+                                                    class="far fa-trash-alt fa-2x"></i></a>
+                                            <i class="fas fa-angle-down fa-2x ml-4" role="button" data-toggle="collapse"
+                                                data-parent="#accordion"
+                                                th:href="'#'+'faq'+${#strings.toString(faq.id_question)}"
+                                                aria-expanded="true"
+                                                th:aria-controls="'faq'+${#strings.toString(faq.id_question)}"></i>
+                                        </div>
+                                    </div>
+                                    <div th:id="'faq'+${#strings.toString(faq.id_question)}" class="collapse"
+                                        role="tabpanel"
+                                        th:aria-labelledby="'heading'+${#strings.toString(faq.id_question)}">
+                                        <div class="answer">
+                                            <p th:utext="${faq.answer}"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </th:block>
+                </ul>
+                <div sec:authorize="hasAuthority('ROLE_ADMIN')"
+                    class="createNewFaq d-flex justify-content-center w-100">
+                    <button th:text="#{faq.add}" class="button-confirm"></button>
+                </div>
+                <div sec:authorize="hasAuthority('ROLE_USER')" class="createNewFaq d-flex justify-content-center w-100">
+                    <button th:text="#{button.question}" class="button-confirm"></button>
+                </div>
+            </div>
+            <div id="newFaq">
+                <div id="faqForm" class="hide">
+                    <form th:action="@{/faq/saveFaq}" method="post" th:object="${newFaq}" style="width: 100%;">
+                        <h1 th:text="#{faq.details}" class="pb-4"></h1>
+                        <div class="form-group">
+                            <label th:text="#{faq.enter}" for="bdef"></label> :<br>
+                            <input type="text" class="loginData" id="bdef" th:field="*{definition}" name="bdef"
+                                th:placeholder="#{faq.placeholder}" autofocus="autofocus" style="width: 80%; ">
+                        </div>
+                        <div sec:authorize="hasAuthority('ROLE_ADMIN')" class="form-group">
+                            <label th:text="#{faq.answer}" for="bans"></label>: <br><textarea id="bans"
+                                th:field="*{answer}" rows="5" name="bans" class="loginData"
+                                style="width: 80%;"> </textarea>
+                        </div>
+                        <div class="d-flex justify-content-around mt-5" style="width: 80%;">
+                            <button th:text="#{button.confirm}" type="submit" id="newFaqAcp"
+                                class="button-confirm"></button>
+                            <button th:text="#{button.cancel}" id="newFaqCnl" class="button-cancel"></button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" th:src="@{/js/faq.js}"></script>
+    <script type="text/javascript" th:src="@{/js/notificationNav.js}"></script>
+    <script sec:authorize="hasAuthority('ROLE_ADMIN')" type="text/javascript" th:src="@{/js/optionNav.js}"></script>
+</body>
+
+</html>

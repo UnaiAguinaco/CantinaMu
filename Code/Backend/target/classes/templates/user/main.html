@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MU Cantine</title>
+    <link rel="icon" th:href="@{/img/icon.ico}" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/f9d1ffcb95.js" crossorigin="anonymous"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/mainUser.css}" rel="stylesheet" />
+    <link th:href="@{/css/global.css}" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <header th:replace="fragments/header :: header"></header>
+    <aside sec:authorize="hasAuthority('ROLE_ADMIN')" class="sideBar hide">
+        <div th:replace="fragments/leftNav :: leftNav"></div>
+    </aside>
+    <aside class=" notificationBar hide">
+        <div th:replace="fragments/rightNav :: rightNav"></div>
+    </aside>
+    <main>
+        <div id="main">
+            <aside id="aside">
+                <div class="h-100 left-aside">
+                    <h2 id="left-day" class="text-white pt-4 d-flex justify-content-center"> </h2>
+                    <hr class="bg-white mx-3">
+                    <div id="aside_event">
+                    </div>
+                    <div class="d-flex justify-content-center pt-5 w-100">
+                        <button th:text="#{button.book}" id="bookBtn" class="button-edit px-5 mb-3"></button>
+                    </div>
+                </div>
+            </aside>
+            <div id="roomSelect" class="hide mr-auto mb-5 w-100">
+                <div id="myRoom" class=" w-100">
+                    <div id="freeDesks" th:fragment="freeDesks">
+                        <p th:text="${freeDesks}"></p>
+                    </div>
+                    <div id="selects" class="d-flex pl-5 justify-content-around flex-column h-100">
+                        <div>
+                            <p th:text="#{building.select}"></p>
+                            <select id="sBuilding" class="form-control text-white"
+                                style="background-color: #014955; font-size: 2rem;">
+                                <option th:each="building : ${buildingList}"
+                                    th:text="#{building.name}+' : '+${#strings.toString(building.idBuilding)} "
+                                    th:value="${#strings.toString(building.idBuilding)}"></option>
+                            </select>
+
+                        </div>
+                        <div>
+                            <p th:text="#{room.select}"></p>
+                            <select id="sRoom" class="form-control text-white"
+                                style="background-color: #014955;  font-size: 2rem;">
+                                <option th:fragment="roomList" th:each="room : ${roomList}"
+                                    th:text="#{room.name}+' : '+${#strings.toString(room.idRoom)} "
+                                    th:value="${#strings.toString(room.idRoom)}">
+                                </option>
+                            </select>
+
+
+                        </div>
+                        <div>
+                            <p th:text="#{hour.select}"></p>
+                            <select id="sHour" class="form-control text-white"
+                                style="background-color: #014955; font-size: 2rem;">
+                                <option value="12:00:00">12:00 - 12:30</option>
+                                <option value="12:30:00">12:30 - 13:00</option>
+                                <option value="13:00:00">13:00 - 13:30</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-around mt-3">
+                        <button th:text="#{desk.show}" id="confirmBook" class="button-confirm px-5 py-2"></button>
+                        <button th:text="#{button.cancel}" id="cancelBook" class="button-cancel"></button>
+                    </div>
+                    <form id="reserveFrom" class="hide" th:action="@{/user/newReserve}" method="post"
+                        th:object="${reservation}">
+                        <input id="inputBuilding" th:field="*{idBuilding.idBuilding}" type="number">
+                        <input id="inputRoom" th:field="*{idRoom.idRoom}" type="number">
+                        <input id="inputHour" th:field="*{time}" type="text">
+
+                    </form>
+
+                </div>
+            </div>
+            <div id="myCalendar" class="show">
+
+                <div class="container">
+                    <!-- Calendar -->
+                    <div class="calendar shadow">
+                        <div class="d-flex align-items-center"><i class="fa fa-calendar fa-3x mr-3"></i>
+                            <h2 id="calendarTitle" class="month font-weight-bold mb-0 text-uppercase text-white"></h2>
+                        </div>
+                        <ol class="day-names list-unstyled">
+                            <li th:text="#{calendar.mon}" class="font-weight-bold text-uppercase text-white"></li>
+                            <li th:text="#{calendar.tue}" class="font-weight-bold text-uppercase text-white"></li>
+                            <li th:text="#{calendar.wed}" class="font-weight-bold text-uppercase text-white"></li>
+                            <li th:text="#{calendar.thu}" class="font-weight-bold text-uppercase text-white"></li>
+                            <li th:text="#{calendar.fri}" class="font-weight-bold text-uppercase text-white"></li>
+                            <li th:text="#{calendar.sat}" class="font-weight-bold text-uppercase text-white "></li>
+                            <li th:text="#{calendar.sun}" class="font-weight-bold text-uppercase text-white"></li>
+                        </ol>
+                        <ol id="calendarlist" class="days list-unstyled">
+                            <li th:each="reserve : ${reservationList}" th:object="${reserve}">
+                                <div th:class="'date date'+*{day}">
+                                    <p th:text="*{day}"></p>
+                                </div>
+                                <div th:if="${reserve.reservation!=null}">
+                                    <p th:value="${reserve.reservation.reservationId}+' '+${reserve.reservation.idBuilding.idBuilding}+' '+${reserve.reservation.idRoom.idRoom}"
+                                        th:text="#{reservation.at}+' '+*{reservation.time} +' '+ #{desk.name}+' '+*{reservation.deskId.idDesk}"
+                                        class="event bg-success"></p>
+                                    <form th:id="'cancelReservation'+${reserve.reservation.reservationId}" method="post"
+                                        th:action="@{/user/deleteReservation/{id}(id=${reserve.reservation.reservationId})}">
+                                    </form>
+                                    <form th:id="'editReservation'+${reserve.reservation.reservationId}"
+                                        th:action="@{/user/editReservation/{id}(id=${reserve.reservation.reservationId})}"
+                                        method="post">
+                                    </form>
+                                    <form th:id="'showReservation'+${reserve.reservation.reservationId}"
+                                        th:action="@{/user/show_reservation/{id}(id=${reserve.reservation.reservationId})}"
+                                        method="GET">
+                                    </form>
+                                </div>
+
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+            <div id="smallDeviceCalendar" class="show">
+                <ol id="smallCalendarlist" class="list-unstyled pr-5">
+                    <h2 id="left-day-small" class="pt-4 d-flex justify-content-center" style="color: #014955;"></h2>
+                    <li th:each="reserve : ${reservationList}" th:object="${reserve}">
+                        <div th:class="'smallDate'+*{day}" style="color: #014955; font-size: 2rem;">
+                            <p th:text="*{day}"></p>
+                        </div>
+                        <div th:if="${reserve.reservation!=null}" class="d-flex justify-content-between">
+                            <p th:value="${reserve.reservation.reservationId}+' '+${reserve.reservation.idBuilding.idBuilding}+' '+${reserve.reservation.idRoom.idRoom}"
+                                th:text="#{reservation.at}+' '+*{reservation.time} + #{building.name}+ ' '+*{reservation.idBuilding.idBuilding}+ #{room.name}+' '+*{reservation.idRoom.idRoom}+ #{desk.name}+' '+*{reservation.deskId.idDesk}"
+                                style="color: #014955; font-size: 1.5rem;"></p>
+                            <div class="d-flex">
+                                <form th:id="'showReservation'+${reserve.reservation.reservationId}"
+                                    th:action="@{/user/show_reservation/{id}(id=${reserve.reservation.reservationId})}"
+                                    method="GET">
+                                    <button type="submit" class="button-confirm" th:text="#{button.view}">View</button>
+                                </form>
+                                <form th:action="@{/user/editReservation/{id}(id=${reserve.reservation.reservationId})}"
+                                    method="post">
+                                    <button type="submit" class="button-confirm" th:text="#{button.update}">Edit</button>
+                                </form>
+                                <form method="post"
+                                    th:action="@{/user/deleteReservation/{id}(id=${reserve.reservation.reservationId})}">
+                                    <button type="submit" class="button-cancel" th:text="#{button.delete}">Delete</button>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div th:unless="${reserve.reservation!=null}" class="d-flex  justify-content-between">
+                            <div></div>
+                            <button th:text="#{button.book}"
+                                th:class="*{day} + ' button-confirm smallBookBtn'"></button>
+                        </div>
+                        <hr>
+                    </li>
+                </ol>
+            </div>
+    </main>
+
+    <script type="text/javascript" th:src="@{/js/notificationNav.js}"></script>
+    <script sec:authorize="hasAuthority('ROLE_ADMIN')" type="text/javascript" th:src="@{/js/optionNav.js}"></script>
+    <script type="text/javascript" th:src="@{/js/script.js}"></script>
+    <script type="text/javascript" th:src="@{/js/calendar.js}"></script>
+</body>
+
+</html>

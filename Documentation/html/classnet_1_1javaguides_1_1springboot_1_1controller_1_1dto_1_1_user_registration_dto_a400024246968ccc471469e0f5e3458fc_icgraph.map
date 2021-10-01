@@ -1,0 +1,5 @@
+<map id="net.javaguides.springboot.controller.dto.UserRegistrationDto.getEmail" name="net.javaguides.springboot.controller.dto.UserRegistrationDto.getEmail">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_registration_controller.html#a279feb8cf708ee8f4c175f29a3286237" title="net.javaguides.springboot.controller.\lUserRegistrationController.registerUser\lAccount" alt="" coords="339,5,616,61"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1service_1_1user_1_1_user_service_impl.html#af0633e74bd7749cc7b40c5c20e3dab7d" title="net.javaguides.springboot.service.user.\lUserServiceImpl.save" alt="" coords="339,86,616,127"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1test.html#a7e5abdcc440e229fce90c3832cac4f4d" title="net.javaguides.springboot.test.testear" alt="" coords="664,93,935,120"/>
+</map>

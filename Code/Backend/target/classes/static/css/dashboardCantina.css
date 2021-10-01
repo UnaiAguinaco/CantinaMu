@@ -1,0 +1,43 @@
+.chart-slider {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 10px;
+}
+
+.chart-slider .slide {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.chart-slider .slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+
+.chart-slider .navigation {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chart-slider .navigation .btn {
+  border: 2px solid #014955;
+  background: rgba(255, 255, 255, 0.5);
+  width: 12px;
+  height: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.chart-slider .navigation .btn.active {
+  background: #014955;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}

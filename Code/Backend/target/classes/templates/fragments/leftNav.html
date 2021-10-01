@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>MU Cantine</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <div class="panel-aside" th:fragment="leftNav">
+    <a href=" /" th:href="@{/admin/main}">
+      <div class="panel-body d-flex">
+        <i class="fas fa-home py-1"></i>
+        <p th:text="#{nav.home}" style="margin-bottom: 0px;"></p>
+      </div>
+    </a>
+    <a href="/" th:href="@{/user/main}">
+      <div class="panel-body d-flex">
+        <i class="fas fa-home"></i>
+        <p th:text="#{user.main}" style="margin-bottom: 0px;"></p>
+      </div>
+    </a>
+    <div style="padding: 1rem;"></div>
+    <a href="/" th:href="@{/admin/create_room}">
+      <div class="panel-body d-flex">
+        <i class="fas fa-plus-circle py-1"></i>
+        <p th:text="#{nav.newRoom}" style="margin-bottom: 0px;"></p>
+      </div>
+    </a>
+    <a href="/" th:href="@{/admin/room_list}">
+      <div class="panel-body d-flex">
+        <i class="fas fa-edit"></i>
+        <p th:text="#{nav.manageRoom}" style="margin-bottom: 0px;"></p>
+      </div>
+    </a>
+    <a href="/" th:href="@{/admin/manage_users}">
+      <div class="panel-body d-flex">
+        <i class="fas fa-user-edit"></i>
+        <p th:text="#{nav.manageUsers}" style="margin-bottom: 0px;"></p>
+      </div>
+    </a>
+    <a href="/" th:href="@{/faq}">
+      <div class="panel-body d-flex">
+        <i class="fas fa-question"></i>
+        <p th:text="#{nav.faq}" style="margin-bottom: 0px;"></p>
+      </div>
+    </a>
+    <div style="padding: 1rem;"></div>
+    <a href="/" th:href="@{/admin/create_building}">
+      <div class="panel-body d-flex">
+        <i class="fas fa-plus-circle"></i>
+        <p th:text="#{nav.newBuilding}" style="margin-bottom: 0px;"></p>
+      </div>
+    </a>
+    <a href="/" th:href="@{/admin/building_list}">
+      <div class="panel-body d-flex">
+        <i class="fas fa-edit"></i>
+        <p th:text="#{nav.manageBuildings}" style="margin-bottom: 0px;"></p>
+      </div>
+    </a>
+    <div style="padding: 1rem;"></div>
+    <a href="/" th:href="@{/logout}">
+      <div class="panel-body d-flex">
+        <i class="fas fa-sign-out-alt"></i>
+        <p th:text="#{nav.logout}" style="margin-bottom: 0px;"></p>
+      </div>
+    </a>
+
+    <div style="padding: 0.5rem;"></div>
+  </div>
+</body>
+
+</html>

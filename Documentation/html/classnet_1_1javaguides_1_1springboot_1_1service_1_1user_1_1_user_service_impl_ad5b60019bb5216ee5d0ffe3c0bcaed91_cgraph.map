@@ -1,0 +1,5 @@
+<map id="net.javaguides.springboot.service.user.UserServiceImpl.loadUserByUsername" name="net.javaguides.springboot.service.user.UserServiceImpl.loadUserByUsername">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_user.html#ac191beb4cff2f1c4774211f7d44dbcdb" title="net.javaguides.springboot.model.\lUser.getEmail" alt="" coords="331,5,571,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_user.html#ab330952c6e8a24541f821d7daee63fae" title="net.javaguides.springboot.model.\lUser.getPassword" alt="" coords="331,71,571,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1model_1_1_user.html#a00df35447d537e19e51202abb3a9fed8" title="net.javaguides.springboot.model.\lUser.getRoles" alt="" coords="331,136,571,177"/>
+</map>

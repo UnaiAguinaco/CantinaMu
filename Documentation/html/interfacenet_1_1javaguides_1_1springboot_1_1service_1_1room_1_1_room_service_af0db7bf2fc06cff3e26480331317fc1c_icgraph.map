@@ -1,0 +1,9 @@
+<map id="net.javaguides.springboot.service.room.RoomService.getAllRooms" name="net.javaguides.springboot.service.room.RoomService.getAllRooms">
+<area shape="rect" id="node2" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_admin_controller.html#ad659611c919d1cdb4ab24fb42445d115" title="net.javaguides.springboot.controller.\lAdminController.remainingDesks" alt="" coords="337,5,597,47"/>
+<area shape="rect" id="node3" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_room_controller.html#a3a4e50ac04bd55ae0fe0abdb30ad9d12" title="net.javaguides.springboot.controller.\lRoomController.roomList" alt="" coords="337,71,597,112"/>
+<area shape="rect" id="node4" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#aad443d371e2193d565dd1956818e9536" title="net.javaguides.springboot.controller.\lUserController.main_user" alt="" coords="337,136,597,177"/>
+<area shape="rect" id="node7" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#aa4f5638ece450c8ff984959dcf0544fc" title="net.javaguides.springboot.controller.\lUserController.chargeRooms" alt="" coords="337,201,597,243"/>
+<area shape="rect" id="node8" href="$classnet_1_1javaguides_1_1springboot_1_1_greeting_controller.html#ada7be9d174f792e2a33f6df7f85ac039" title="net.javaguides.springboot.\lGreetingController.sendMessage" alt="" coords="351,267,584,308"/>
+<area shape="rect" id="node5" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_faq_controller.html#a985f99580f29de105309ebd79317d38c" title="net.javaguides.springboot.controller.\lFaqController.faqAdmin" alt="" coords="645,104,905,145"/>
+<area shape="rect" id="node6" href="$classnet_1_1javaguides_1_1springboot_1_1controller_1_1_user_controller.html#a632c7a174a9c916399a9f26f8b21c547" title="net.javaguides.springboot.controller.\lUserController.user_settings" alt="" coords="645,169,905,211"/>
+</map>

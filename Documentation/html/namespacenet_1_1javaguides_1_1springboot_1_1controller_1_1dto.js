@@ -1,0 +1,5 @@
+var namespacenet_1_1javaguides_1_1springboot_1_1controller_1_1dto =
+[
+    [ "BuildingRegistrationDto", "classnet_1_1javaguides_1_1springboot_1_1controller_1_1dto_1_1_building_registration_dto.html", "classnet_1_1javaguides_1_1springboot_1_1controller_1_1dto_1_1_building_registration_dto" ],
+    [ "UserRegistrationDto", "classnet_1_1javaguides_1_1springboot_1_1controller_1_1dto_1_1_user_registration_dto.html", "classnet_1_1javaguides_1_1springboot_1_1controller_1_1dto_1_1_user_registration_dto" ]
+];

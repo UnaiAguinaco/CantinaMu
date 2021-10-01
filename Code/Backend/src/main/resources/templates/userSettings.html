@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MU Cantine</title>
+    <link rel="icon" th:href="@{/img/icon.ico}" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/f9d1ffcb95.js" crossorigin="anonymous"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/manage_user.css}" rel="stylesheet" />
+    <link th:href="@{/css/global.css}" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="overflow: hidden;">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <header th:replace="fragments/header :: header"></header>
+    <aside class=" sideBar hide">
+        <div th:replace="fragments/leftNav :: leftNav"></div>
+    </aside>
+    <aside class=" notificationBar hide">
+        <div th:replace="fragments/rightNav :: rightNav"></div>
+    </aside>
+    <main class=" d-flex justify-content-center " style="height: 50%;">
+        <div id="userData" class="">
+            <div class=" d-flex flex-column">
+                <div class="userDataContainer d-flex" th:object="${userData}">
+                    <div><img th:src="@{/img/userImg.png}" class="rounded-circle" alt="Cinque Terre"
+                            style="height: 20vh; margin-right: 10rem;"></div>
+                    <div style="font-size: 2rem;">
+                        <p th:utext="'Idal: '+ ${userData.idal}"></p>
+                        <p th:utext="#{user.name}+' ' + ${userData.firstName} + ' ' + ${userData.lastName}"></p>
+                        <p class="userEmail" th:utext="'Email: ' + ${userData.email}">Email: example@email.com</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-around mt-5" style="width: 100%;">
+                    <button th:text="#{user.changePass}" type="submit" id="changePassBtn"
+                        class="button-confirm mr-5">Change Password</button>
+                    <a th:text="#{nav.logout}" th:href="@{/logout}" class="button-cancel"></a>
+                </div>
+            </div>
+        </div>
+        <div id="changePassForm" class="hide">
+            <form th:action="@{/userSettings/changePassword}" method="post" th:object="${changePass}"
+                style="width: 100%;" id="formChangePass">
+                <h1 th:text="#{user.dataChangePass}" class="pb-4"></h1>
+                <div class="form-group">
+                    <div><label th:text="#{user.oldPass}" for="bdef"> </label> :<br></div>
+
+                    <input type="text" class="loginData" id="bdef" th:field="*{oldPassword}" name="bdef"
+                        th:placeholder="#{user.oldPass}" autofocus="autofocus" style="width: 80%; ">
+                </div>
+                <div class="form-group">
+                    <div><label th:text="#{user.newPass}" for="uPassword"> </label> :<br></div>
+
+                    <input type="text" class="loginData" id="uPassword" th:field="*{newPassword}" name="uPassword"
+                        th:placeholder="#{user.newPass}" style="width: 80%; ">
+                </div>
+                <div class="form-group">
+                    <div><label th:text="#{user.repeatPass}" for="urPassword"> </label> :<br></div>
+
+                    <input type="text" class="loginData" id="urPassword" th:field="*{repeatPassword}" name="urPassword"
+                        th:placeholder="#{user.repeatPass}" style="width: 80%; ">
+                </div>
+
+            </form>
+            <div id="buttonDiv">
+                <div class="d-flex justify-content-around mt-5" style="width: 80%;">
+                    <button th:text="#{button.confirm}" id="confPass" type="submit" class="button-confirm"></button>
+                    <button th:text="#{button.cancel}" id="cnclPass" class="button-cancel"></button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script type="text/javascript" th:src="@{/js/userSettings.js}"></script>
+    <script type="text/javascript" th:src="@{/js/notificationNav.js}"></script>
+    <script sec:authorize="hasAuthority('ROLE_ADMIN')" type="text/javascript" th:src="@{/js/optionNav.js}"></script>
+</body>
+
+</html>

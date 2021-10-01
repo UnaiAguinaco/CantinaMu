@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MU Cantine</title>
+    <link rel="icon" th:href="@{/img/icon.ico}" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/f9d1ffcb95.js" crossorigin="anonymous"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/css/covid_status.css}" rel="stylesheet" />
+    <link th:href="@{/css/global.css}" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <header th:replace="fragments/header :: header"></header>
+    <aside class=" sideBar hide">
+        <div th:replace="fragments/leftNav :: leftNav"></div>
+    </aside>
+    <aside class=" notificationBar hide">
+        <div th:replace="fragments/rightNav :: rightNav"></div>
+    </aside>
+    <main>
+        <div class="container">
+            <div id="finder">
+                <h2 th:text="#{user.find}"></h2>
+                <input id="search" type="text" th:placeholder="#{search}">
+            </div>
+            <hr>
+            <ul class="list-group" id="userList">
+                <th:block th:each="user : ${userList}">
+                    <li class="userItems">
+                        <p th:utext="${user.idal}" class="userIdal"></p>
+                        <p th:utext="${user.firstName} + ' ' + ${user.lastName}" class="userName"></p>
+                        <p th:utext="${user.email}" class="userEmail"></p>
+                        <div class="covidStatus">
+                            <p th:text="#{user.status}"></p>
+                            <form class="updateForm" th:action="@{/admin/updateStatus/{id}(id=${user.idal})}"
+                                method="post">
+                                <label class="switch">
+                                    <input class="checkbox statusCheckBox" onclick="this.form.submit();"
+                                        th:if="${user.infected}" type="checkbox" checked>
+                                    <input class="checkbox statusCheckBox" onclick="this.form.submit();"
+                                        th:if="${not user.infected}" type="checkbox">
+
+                                    <span class="slider round"></span>
+                                </label>
+                            </form>
+                        </div>
+                    </li>
+                </th:block>
+            </ul>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $("#search").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    $("#userList li").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+
+    </main>
+    <script type="text/javascript" th:src="@{/js/script.js}"></script>
+    <script type="text/javascript" th:src="@{/js/notificationNav.js}"></script>
+    <script type="text/javascript" th:src="@{/js/optionNav.js}"></script>
+</body>
+
+</html>
